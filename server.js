@@ -7,17 +7,10 @@ import Participant from './models/Participants.js';
 const app = express()
 app.use(cors())
 
-// const db = mysql.createConnection({
-//   host: '10.0.0.62',
-//   port: 3306,
-//   user:"noga",
-//   password:"123456",
-//   database:"Test"
-// })
-
-app.get('/', async (req, res) => {
+app.get('/api', async (req, res) => {
     try {
         const participants = await Participant.findAll();
+        res.setHeader('Content-Type', 'application/json');
         res.json(participants);
     } catch (error) {
         res.status(500).json({ error: 'Failed to fetch participants' });

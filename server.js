@@ -15,7 +15,7 @@ app.use(cors())
 //   database:"Test"
 // })
 
-app.get('/api/participants', async (req, res) => {
+app.get('/', async (req, res) => {
     try {
         const participants = await Participant.findAll();
         res.json(participants);

@@ -14,6 +14,7 @@ const port = env.PORT || 3001;
 
 app.get('/api', async (req, res) => {
     try {
+        console.log("new request")
         const participants = await Participant.findAll();
         res.setHeader('Content-Type', 'application/json');
         res.json(participants);
@@ -24,6 +25,8 @@ app.get('/api', async (req, res) => {
 
 app.post('/form', async (req, res) => {
     try {
+        console.log("new request")
+        console.log("req.body:",req.body);
         const {  id, country, city, location, dateOfBirth, condition_id } = req.body;
         var newParticipant={  per_id:id, country, city, location, date_of_birth:dateOfBirth, condition_id }
         console.log('newParticipant:',newParticipant);

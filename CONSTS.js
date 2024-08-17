@@ -1,6 +1,6 @@
 
 const env = {
-    SERVER_URL: 'https://infopeace-server.onrender.com/',
+    SERVER_URL: 'https://infopeace-server.onrender.com',
     DB_NAME: 'defaultdb',
     DB_USER: 'avnadmin',
     DB_PASS: 'AVNS_rk2eBwT0s0_RCMv31C8',

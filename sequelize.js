@@ -1,10 +1,9 @@
 import { Sequelize } from 'sequelize';
-import dotenv from 'dotenv';
-dotenv.config();
+import env from './CONSTS.js';
 
-const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PASS, {
-    host: process.env.DB_HOST,
-    port: process.env.DB_PORT,
+const sequelize = new Sequelize(env.DB_NAME, env.DB_USER, env.DB_PASS, {
+    host: env.DB_HOST,
+    port: env.DB_PORT,
     dialect: 'mysql',
 });
 

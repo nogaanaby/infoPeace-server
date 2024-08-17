@@ -4,12 +4,13 @@ import cors from 'cors'
 import sequelize from 'sequelize'
 import Participant from './models/Participants.js';
 import dotenv from 'dotenv';
+import env from './CONSTS.js';
 
 const app = express()
 app.use(cors())
 app.use(express.json());
 dotenv.config();
-const port = process.env.PORT || 3001;
+const port = env.PORT || 3001;
 
 app.get('/api', async (req, res) => {
     try {

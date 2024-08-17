@@ -40,8 +40,8 @@ app.post('/form', async (req, res) => {
 });
 
 //works
-var p = { per_id: 1, country: 'USA', city: 'New York', location: { type: 'Point', coordinates: [40.7128, -74.0060] }, date_of_birth: '1990-01-01', condition_id: 1 };
-Participant.create(p);
+// var p = { per_id: 1, country: 'USA', city: 'New York', location: { type: 'Point', coordinates: [40.7128, -74.0060] }, date_of_birth: '1990-01-01', condition_id: 1 };
+// Participant.create(p);
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`)
